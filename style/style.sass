@@ -1,0 +1,359 @@
+@import _mixins
+@font-face
+    font-family: 'OpenSans-Regular'
+    src: url('../fonts/OpenSans-Regular.eot')
+    src: local('☺'), url('../fonts/OpenSans-Regular.woff') format('woff'), url('../fonts/OpenSans-Regular.ttf') format('truetype'), url('../fonts/OpenSans-Regular.svg') format('svg')
+    font-weight: normal
+    font-style: normal
+body
+    +body()
+a
+    +links()
+button
+    +buttons()
+input
+    +buttons()
+header
+    +block(95%, 64px, none, flex, space-between, center)
+    position: absolute
+    left: 50%
+    transform: translateX(-50%)
+    top: 37px
+    z-index: 1
+.header__logo
+    +block(207px, 41px, none, flex, space-between, center)
+    +font(OpenSans-Regular, normal, 800, 30px, 41px, #EB0E0E)
+.header__logo-title
+    +font(OpenSans-Regular, normal, 600, 12px, 16px, white)
+.header__social-webs
+    +block(239px, 35px, none, flex, space-between, center)
+.header__social-webs-title
+    +font(OpenSans-Regular, normal, 600, 12px, 16px, white)
+.header__address
+    +block(209px, 32px, none, flex, space-between, center)
+.header__address-title
+    +font(OpenSans-Regular, normal, 600, 12px, 16px, white)
+.header__address-subtitle
+    +font(OpenSans-Regular, normal, 600, 12px, 16px, white)
+.header__contacts
+    +block(165px, 64px, none, flex, none, center)
+.header__contacts-number
+    +font(OpenSans-Regular, normal, bold, 18px, 25px, white)
+.header__contacts-burger-menu
+    +block(100%, 100%, #EB0E0E, none, center, center)
+    transition: 500ms
+    cursor: pointer
+.header__contacts-burger-menu:hover
+    background: orange
+.header__contacts-burger-menu-active
+    background: orange
+.header-mobile
+    +block(100%, 210px, none, none, space-between, center)
+    flex-direction: column
+    position: absolute
+    left: 50%
+    transform: translateX(-50%)
+    top: 80px
+    z-index: 1
+.header-mobile-active
+    display: flex
+.header-mobile__social-webs
+    +block(100%, 30%, black, flex, center, center)
+    opacity: 0.7
+.header-mobile__social-webs-title
+    +font(OpenSans-Regular, normal, 600, 20px, 30px, white)
+.header-mobile__social-webs-link
+    margin-left: 20px
+.header-mobile__address
+    +block(100%, 30%, black, flex, center, center)
+    opacity: 0.7
+.header-mobile__address-subtitle
+    +font(OpenSans-Regular, normal, 600, 20px, 30px, white)
+.header-mobile__contacts
+    +block(100%, 30%, black, flex, center, center)
+    opacity: 0.7
+.header-mobile__contacts-number
+    +font(OpenSans-Regular, normal, 600, 20px, 30px, white)
+.slider
+    +block(100%, 1093px, none, block, none, none)
+    position: relative
+.slider__main-track
+    +block(100%, 100%, none, block, none, none)
+    position: relative
+.slider__main-track-item
+    position: absolute
+    +block(100%, 100%, none, block, none, none)
+    z-index: -1
+    opacity: 0
+    transition: opacity 500ms
+.active
+    z-index: 0
+    opacity: 1
+.slider__main-track-item:nth-child(1)
+    background-image: url('../images/bg 1.png')
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center
+    display: flex
+    align-items: flex-end
+    justify-content: center
+.slider__main-track-inner-first
+    +block(95%, 75%, none, flex, space-between, none)
+    flex-direction: column
+.slider__main-track-inner-first-upper
+    +block(100%, 65%, none, flex, space-between, center)
+.slider__main-track-inner-first-upper-left
+    +block(51%, 100%, none, flex, space-between, none)
+    flex-direction: column
+.slider__main-track-inner-first-upper-left-title
+    +font(OpenSans-Regular, normal, 800, 60px, 82px, #EB0E0E)
+.slider__main-track-inner-first-upper-left-subtitle-block
+    +block(58%, 35%, none, flex, space-between, none)
+    flex-direction: column
+.slider__main-track-inner-first-upper-left-subtitle-block-item
+    +font(OpenSans-Regular, normal, normal, 30px, 30px, #FFFFFF)
+.slider__main-track-inner-first-upper-left-submit
+    +block(44%, 13%, #EB0E0E, flex, center, center)
+    cursor: pointer
+    transition: 500ms
+    +font(OpenSans-Regular, normal, bold, 25px, 25px, #FFFFFF)
+.slider__main-track-inner-first-upper-left-submit:hover
+    background: orange
+.slider__main-track-inner-first-upper-btn
+    +block(18%, 14%, #EB0E0E, flex, center, center)
+    +font(OpenSans-Regular, normal, bold, 18px, 18px, #FFFFFF)
+    transform: rotate(-90deg)
+    cursor: pointer
+    transition: 500ms
+.slider__main-track-inner-first-upper-btn:hover
+    background: orange
+.slider__main-track-inner-first-down
+    +block(93%, 23%, none, flex, space-between, center)
+.slider__main-track-inner-first-down-more
+    +block(none, none, none, flex, none, center)
+    +font(OpenSans-Regular, normal, normal, 18px, 18px, rgba(255, 255, 255, 0.6))
+    cursor: pointer
+.slider__main-track-inner-first-down-more-img
+    margin-right: 15px
+.slider__main-track-inner-first-down-dots
+    +block(64%, 100%, none, flex, space-between, none)
+.slider__main-track-inner-first-down-dots-item-first
+    width: 30%
+    height: 100%
+    cursor: pointer
+.slider__main-track-inner-first-down-dots-item-second
+    width: 30%
+    height: 100%
+    cursor: pointer
+.slider__main-track-inner-first-down-dots-item-third
+    width: 30%
+    height: 100%
+    cursor: pointer
+.slider__main-track-item:nth-child(2)
+    background: #121212
+    display: flex
+    justify-content: flex-end
+    align-items: center
+.slider__main-track-inner-second
+    +block(96%, 61%, none, flex, space-between, center)
+    flex-direction: column
+.slider__main-track-inner-second-title
+    +font(OpenSans-Regular, normal, 800, 30px, 41px, #EB0E0E)
+.slider__main-track-inner-second-down
+    +block(100%, 81%, none, flex, space-between, center)
+.slider__main-track-inner-second-left
+    +block(45%, 100%, none, flex, space-between, none)
+    flex-direction: column
+.slider__main-track-inner-second-left-description
+    +font(OpenSans-Regular, normal, bold, 14px, 19px, white)
+.slider__main-track-inner-second-left-description-title
+    color: #EB0E0E
+.slider__main-track-inner-second-right
+    +block(54%, 100%, none, block, none, none)
+    background-image: url('../images/image22 1.jpg')
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center
+.slider__main-track-item:nth-child(3)
+    background: #121212
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+.slider__main-track-inner-third
+    +block(20%, 64%, none, flex, space-between, center)
+    flex-direction: column
+    text-align: center
+.slider__main-track-inner-third-title
+    +font(OpenSans-Regular, normal, 800, 30px, 41px, #EB0E0E)
+.slider__main-track-inner-third-track
+    +block(100%, 88%, none, block, none, none)
+    position: relative
+.slider__main-track-inner-third-track-column
+    +block(100%, 100%, none, flex, space-between, center)
+    position: absolute
+    z-index: -1
+    opacity: 0
+    transition: opacity 500ms
+    flex-direction: column
+.track-column-active
+    z-index: 0
+    opacity: 1
+.slider__main-track-inner-third-track-column-img
+    +block(100%, 47%, none, inline, none, none)
+.slider__main-track-inner-third-track-column-title
+    +font(OpenSans-Regular, normal, 800, 24px, 33px, #EB0E0E)
+.slider__main-track-inner-third-track-column-description
+    +font(OpenSans-Regular, normal, normal, 14px, 19px, white)
+.slider__main-track-inner-third-track-column-price
+    +font(OpenSans-Regular, normal, normal, 14px, 19px, #EB0E0E)
+.slider__main-track-inner-third-track-column-btn
+    +block(65%, 7%, #EB0E0E, flex, center, center)
+    +font(OpenSans-Regular, normal, bold, 14px, 19px, white)
+    cursor: pointer
+    transition: 500ms
+.slider__main-track-inner-third-track-column-btn:hover
+    background: orange
+.slider__main-track-inner-third-more
+    +block(200px, none, none, flex, none, center)
+    +font(OpenSans-Regular, normal, normal, 18px, 18px, rgba(255, 255, 255, 0.6))
+    position: absolute
+    bottom: 59px
+    left: 84px
+    cursor: pointer
+.slider__main-track-inner-third-more-img
+    margin-right: 16px
+.slider__main-track-inner-third-next-btn
+    +block(69px, 64px, #EB0E0E, flex, center, center)
+    position: absolute
+    top: 299px
+    right: 0
+    transition: 500ms
+    cursor: pointer
+.slider__main-track-inner-third-next-btn:hover
+    background: orange
+.slider__main-track-inner-third-prev-btn
+    +block(69px, 64px, #EB0E0E, flex, center, center)
+    position: absolute
+    top: 427px
+    right: 0
+    transition: 500ms
+    cursor: pointer
+.slider__main-track-inner-third-prev-btn:hover
+    background: orange
+.slider__main-track-item:nth-child(4)
+    background: #121212
+.slider__main-track-inner-fourth
+    +block(79%, 79%, none, flex, space-between, none)
+    flex-direction: column
+    position: absolute
+    top: 177px
+    left: 84px
+    text-align: center
+.slider__main-track-inner-fourth-title
+    +font(OpenSans-Regular, normal, 800, 30px, 41px, #EB0E0E)
+.slider__main-track-inner-fourth-gallery
+    +block(100%, 81%, none, none, space-between, none)
+.tabs-active
+    display: flex
+.slider__main-track-inner-fourth-gallery-column
+    +block(29%, 100%, none, flex, space-between, none)
+    flex-direction: column
+.slider__main-track-inner-fourth-gallery-column-item
+    +block(100%, 47%, none, inline, none, none)
+.slider__main-track-fourth-tabs-btn
+    +block(180px, 198px, none, flex, space-between, none)
+    flex-direction: column
+    margin-top: 40px
+    position: absolute
+    right: 0
+    top: 309px
+.slider__main-track-fourth-tabs-btn-item
+    +block(100%,40px, #EB0E0E, flex, center, center)
+    +font(OpenSans-Regular, normal, bold, 14px, 19px, white)
+    transition: 500ms
+    cursor: pointer
+.slider__main-track-fourth-tabs-btn-item:hover
+    background: orange
+.tabs-btn-active
+    background: orange
+.slider__main-track-inner-fourth-more
+    +block(200px, none, none, flex, none, center)
+    +font(OpenSans-Regular, normal, normal, 18px, 18px, rgba(255, 255, 255, 0.6))
+    cursor: pointer
+.slider__main-track-inner-fourth-more-img
+    margin-right: 16px
+.slider__main-track-item:nth-child(5)
+    background: #121212
+    display: flex
+    justify-content: flex-end
+    align-items: center
+.slider__main-track-inner-fifth
+    +block(75%, 72%, none, flex, space-between, center)
+    flex-direction: column
+.slider__main-track-inner-fifth-title
+    +font(OpenSans-Regular, normal, 800, 30px, 41px, #EB0E0E)
+.slider__main-track-inner-fifth-contacts
+    +block(100%, 88%, none, flex, space-between, none)
+.slider__main-track-inner-fifth-contacts-left
+    +block(36%, 100%, none, flex, space-between, none)
+    flex-direction: column
+.slider__main-track-inner-fifth-contacts-left-upper
+    +block(100%, 29%, none, flex, space-between, none)
+    flex-direction: column
+.slider__main-track-inner-fifth-contacts-left-upper-item
+    +font(OpenSans-Regular, normal, bold, 16px, 20px, #EB0E0E)
+.slider__main-track-inner-fifth-contacts-left-upper-item-special
+    +font(OpenSans-Regular, normal, bold, 16px, 20px, white)
+.slider__main-track-inner-fifth-contacts-left-down
+    +block(100%, 59%, none, flex, space-between, none)
+    flex-direction: column
+.slider__main-track-inner-fifth-contacts-left-down-item
+    +font(OpenSans-Regular, normal, bold, 16px, 20px, #EB0E0E)
+.slider__main-track-inner-fifth-contacts-left-down-item-special
+    +font(OpenSans-Regular, normal, bold, 16px, 20px, white)
+.slider__main-track-inner-fifth-contacts-left-down-form
+    +block(100%, 52%, none, flex, space-between, none)
+    flex-direction: column
+.lider__main-track-inner-fifth-contacts-left-down-form-input
+    +block(65%, 25%, rgba(255, 255, 255, 0.4), flex, center, center)
+    +font(OpenSans-Regular, normal, bold, 16px, 22px, white)
+.slider__main-track-inner-fifth-contacts-left-down-form-submit
+    +block(65%, 25%, #EB0E0E, flex, center, center)
+    +font(OpenSans-Regular, normal, bold, 16px, 22px, white)
+    transition: 500ms
+    cursor: pointer
+.slider__main-track-inner-fifth-contacts-left-down-form-submit:hover
+    background: orange
+.slider__main-track-inner-fifth-contacts-map
+    width: 56%
+    height: 80%
+.slider__main-track-inner-fifth-more
+    +block(200px, none, none, flex, none, center)
+    +font(OpenSans-Regular, normal, normal, 18px, 18px, rgba(255, 255, 255, 0.6))
+    cursor: pointer
+    position: absolute
+    bottom: 59px
+    left: 84px
+.slider__main-track-inner-fifth-more-img
+    margin-right: 16px
+.slider__btn-prev
+    +block(69px, 64px, #EB0E0E, flex, center, center)
+    position: absolute
+    top: 50%
+    left: 0
+    transition: 500ms
+    cursor: pointer
+    opacity: 0.5
+.slider__btn-prev:hover
+    background: orange
+.slider__btn-next
+    +block(69px, 64px, #EB0E0E, flex, center, center)
+    position: absolute
+    top: 50%
+    right: 0
+    transition: 500ms
+    cursor: pointer
+    opacity: 0.5
+.slider__btn-next:hover
+    background: orange
